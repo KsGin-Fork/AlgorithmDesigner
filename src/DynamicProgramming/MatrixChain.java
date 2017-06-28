@@ -7,13 +7,13 @@ import java.util.ArrayList;
  */
 public class MatrixChain {
     public static void main(String[] args){
-
+        System.out.println("Hello , Matrix chain");
     }
 
     /**
      * 最小乘次数
      * @param list 需要乘的矩阵行列数列表
-     * @return
+     * @return 最小乘次数
      */
     public static int MinChainCount(ArrayList list){
         return 0;
