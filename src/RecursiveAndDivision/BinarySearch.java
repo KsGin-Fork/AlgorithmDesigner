@@ -5,16 +5,16 @@ package RecursiveAndDivision;
  */
 public class BinarySearch{
     public static void main(String[] args){
-        System.out.println(BinarySearch.BinarySearch(new Integer[]{1 , 2 , 3 ,  4, 4 , 4, 4, 5} , 1));
-        System.out.println(BinarySearch.BinarySearch(new Integer[]{1 , 2 , 3 ,  4, 4 , 4, 4, 5} , 3));
-        System.out.println(BinarySearch.BinarySearch(new Integer[]{1 , 2 , 3 ,  4, 4 , 4, 4, 5} , 5));
-        System.out.println(BinarySearch.BinarySearch(new Integer[]{1 , 2 , 3 ,  4, 4 , 4, 4, 5} , 15));
-        System.out.println(BinarySearch.BinarySearch(new Integer[]{1 , 2 , 3 ,  4, 4 , 4, 4, 5} , -15));
-        System.out.println(BinarySearch.BinarySearch(new Integer[]{1 , 2 , 3 ,  4, 4 , 4, 4, 5 , 6} , 1));
-        System.out.println(BinarySearch.BinarySearch(new Integer[]{1 , 2 , 3 ,  4, 4 , 4, 4, 5 , 6} , 3));
-        System.out.println(BinarySearch.BinarySearch(new Integer[]{1 , 2 , 3 ,  4, 4 , 4, 4, 5 , 6} , 6));
-        System.out.println(BinarySearch.BinarySearch(new Integer[]{1 , 2 , 3 ,  4, 4 , 4, 4, 5 , 6} , 16));
-        System.out.println(BinarySearch.BinarySearch(new Integer[]{1 , 2 , 3 ,  4, 4 , 4, 4, 5 , 6} , -16));
+        System.out.println(BinarySearch.BinarySearch0(new Integer[]{1 , 2 , 3 ,  4, 4 , 4, 4, 5} , 1));
+        System.out.println(BinarySearch.BinarySearch0(new Integer[]{1 , 2 , 3 ,  4, 4 , 4, 4, 5} , 3));
+        System.out.println(BinarySearch.BinarySearch0(new Integer[]{1 , 2 , 3 ,  4, 4 , 4, 4, 5} , 5));
+        System.out.println(BinarySearch.BinarySearch0(new Integer[]{1 , 2 , 3 ,  4, 4 , 4, 4, 5} , 15));
+        System.out.println(BinarySearch.BinarySearch0(new Integer[]{1 , 2 , 3 ,  4, 4 , 4, 4, 5} , -15));
+        System.out.println(BinarySearch.BinarySearch0(new Integer[]{1 , 2 , 3 ,  4, 4 , 4, 4, 5 , 6} , 1));
+        System.out.println(BinarySearch.BinarySearch0(new Integer[]{1 , 2 , 3 ,  4, 4 , 4, 4, 5 , 6} , 3));
+        System.out.println(BinarySearch.BinarySearch0(new Integer[]{1 , 2 , 3 ,  4, 4 , 4, 4, 5 , 6} , 6));
+        System.out.println(BinarySearch.BinarySearch0(new Integer[]{1 , 2 , 3 ,  4, 4 , 4, 4, 5 , 6} , 16));
+        System.out.println(BinarySearch.BinarySearch0(new Integer[]{1 , 2 , 3 ,  4, 4 , 4, 4, 5 , 6} , -16));
         System.out.println("-----------------------------------------------------------------------------------");
         System.out.println(BinarySearch.BinarySearch5(new Integer[]{1 , 2 , 3 , 4 , 4 , 4, 4, 5} , 1));
         System.out.println(BinarySearch.BinarySearch5(new Integer[]{1 , 2 , 3 , 4 , 4 , 4, 4, 5} , 3));
@@ -29,7 +29,7 @@ public class BinarySearch{
     }
 
     //我自己写的
-    public static <T extends Comparable> int BinarySearch(T[] arr , T k){
+    public static <T extends Comparable> int BinarySearch0(T[] arr , T k){
         int min = 0 , max = arr.length - 1;
         int mid;
         while (min <= max){

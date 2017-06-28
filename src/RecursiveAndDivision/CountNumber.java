@@ -9,9 +9,9 @@ import java.util.Map;
  */
 public class CountNumber {
     public static void main(String[] args) throws IOException {
-        CountNumber("C:\\Users\\杨帆\\Desktop\\1.txt","C:\\Users\\杨帆\\Desktop\\2.txt");
+        GetCountNumber("C:\\Users\\KsGin\\Desktop\\1.txt","C:\\Users\\KsGin\\Desktop\\2.txt");
     }
-    private static void CountNumber(String inputPath, String outputPath) throws IOException {
+    private static void GetCountNumber(String inputPath, String outputPath) throws IOException {
         try {
             FileInputStream fis = new FileInputStream(inputPath);
             InputStreamReader isr = new InputStreamReader(fis);
