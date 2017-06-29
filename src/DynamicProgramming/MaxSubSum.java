@@ -79,4 +79,13 @@ public class MaxSubSum {
 
         return sum;
     }
+
+    /**
+     * 最大子矩阵和
+     * @param nums 矩阵
+     * @return 最大值
+     */
+    private static int MaxMatrixSubSum(int[][] nums){
+        return 1;
+    }
 }
