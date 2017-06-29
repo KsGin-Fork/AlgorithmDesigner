@@ -6,7 +6,7 @@ package DynamicProgramming;
  */
 public class MaxSubSum {
     public static void main(String[] args){
-        System.out.println("MaxSubSum = " + MaxSumReview(new int[]{4, -2 , -8 , 3 , 7}));
+        System.out.println("MaxSubSum = " +  MaxMulSubSum(new int[]{0 , 4, -2 , -8 , 3 , 7}  , 3));
     }
 
     /**
@@ -46,6 +46,37 @@ public class MaxSubSum {
             else b = num;
             if (b > sum) sum = b;
         }
+        return sum;
+    }
+
+    /**
+     * 最大m子段和问题
+     * @param nums 数组
+     * @return 最大和
+     */
+    private static int MaxMulSubSum(int[] nums , int m){
+        int n = nums.length - 1;
+        if (m > n || m < 0) return 0;
+        int[] p1 = new int[n+1];
+        int[] p2 = new int[n+1];
+
+        for (int i = 1 ; i <= m ; i++){
+            p1[i] = p1[i-1] + nums[i];
+            p2[i-1] = p1[i];
+            int max = p1[i];
+            for (int j = i+1 ; j <= i+n-m ; j++){
+                p1[j] = (p1[j-1] > p2[j-1] ? p1[j-1] : p2[j-1]) + nums[j];
+                p2[j-1] = max;
+                if (max < p1[j])  max = p1[j];
+            }
+            p2[i+n-m] = max;
+        }
+
+        int sum = 0;
+        for (int i = m ; i <= n ; i++){
+            if (sum < p1[i]) sum = p1[i];
+        }
+
         return sum;
     }
 }
