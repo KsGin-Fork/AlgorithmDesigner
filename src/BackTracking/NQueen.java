@@ -38,7 +38,7 @@ public class NQueen {
             if (t > n) {
                 sum++;
             } else {
-                for (int i = 1; i <= n ; i++){  
+                for (int i = 1; i <= n ; i++){
                     x[t] = i;
                     if (Place(t)) BackTrack(t+1);
                 }
