@@ -1,7 +1,6 @@
 package DynamicProgramming;
 
 /**
- * File Name : ${FILENAME}
  * Created by KsGin on 2017/6/28.
  */
 public class ZeroOnePackage {
