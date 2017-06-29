@@ -1,12 +1,12 @@
 package DynamicProgramming;
 
 /**
- * File Name : ${FILENAME}
+ * File Name : MaxSubSum.cpp
  * Created by KsGin on 2017/6/28.
  */
 public class MaxSubSum {
     public static void main(String[] args){
-        System.out.println("MaxSubSum = " +  MaxMulSubSum(new int[]{0 , 4, -2 , -8 , 3 , 7}  , 3));
+        System.out.println("MaxSubSum = " +  MaxMatrixSubSum(new int[][]{{0 , 4}, {-2 , -8} , {3 , 7}}));
     }
 
     /**
@@ -86,6 +86,22 @@ public class MaxSubSum {
      * @return 最大值
      */
     private static int MaxMatrixSubSum(int[][] nums){
-        return 1;
+        int m = nums.length-1;
+        int n = nums[0].length-1;
+        int sum = 0;
+        int[] b = new int[n+1];
+        for (int i = 0 ; i <= m ; i++){
+            for (int k = 1; k <= n; k++){
+                b[k] = 0;
+            }
+            for (int j = i ; j <= m; j++){
+                for (int k = 1 ; k <= n; k++){
+                    b[k] += nums[j][k];
+                }
+                int max = MaxSumReview(b);
+                if (max > sum) sum = max;
+            }
+        }
+        return sum;
     }
 }
