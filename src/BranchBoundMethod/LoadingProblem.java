@@ -18,7 +18,7 @@ public class LoadingProblem { /*装载问题*/  /*分支限界法*/
     static int EnQueue(
             Queue<Integer> Q    /*队列*/,
             int wt              /*当前价值*/,
-            Integer bestw           /*最大价值*/,
+            int bestw           /*最大价值*/,
             int i               /*当前层数*/,
             int n               /*最大层数*/) {
         if (i == n) {
